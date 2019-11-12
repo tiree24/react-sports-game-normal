@@ -44,12 +44,21 @@ class Team extends React.Component {
 function App(props) {
   return (
     <div className="App">
-      <Team name="Russiaville Raccoons" logo="./assets/img/raccoon.jpeg" />
-      <div className="versus">
-        <h1>VS</h1>
-      </div>
+      <div className="stats">
+        <Team
+          name="Russiaville Raccoons"
+          logo="./assets/img/raccoon.jpeg"
+        />
 
-      <Team name="Sheridan Squirrels" logo="./assets/img/squirrel.jpeg" />
+        <div className="versus">
+          <h1>VS</h1>
+        </div>
+
+        <Team
+          name="Sheridan Squirrels"
+          logo="./assets/img/squirrel.jpeg"
+        />
+      </div>
     </div>
   );
 }
