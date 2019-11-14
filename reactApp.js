@@ -47,7 +47,7 @@ function App(props) {
       <div className="stats">
         <Team
           name="Russiaville Raccoons"
-          logo="./assets/img/raccoon.jpeg"
+          logo="https://cdn.mos.cms.futurecdn.net/YYH9o4wmSXJfvbzRTq5BTY-320-80.jpg"
         />
 
         <div className="versus">
@@ -56,7 +56,7 @@ function App(props) {
 
         <Team
           name="Sheridan Squirrels"
-          logo="./assets/img/squirrel.jpeg"
+          logo="https://media.npr.org/assets/img/2017/04/25/istock-115796521-fcf434f36d3d0865301cdcb9c996cfd80578ca99-s800-c85.jpg"
         />
       </div>
     </div>
