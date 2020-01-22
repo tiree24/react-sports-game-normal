@@ -6,13 +6,22 @@ class Team extends React.Component {
       shots: 0,
       score: 0
     };
+    this.shotSound = new Audio('/Users/tireejackson/Downloads/Swish+2.mp3')
+    this.scoreSound = new Audio('/Users/tireejackson/Downloads/Swish+2.mp3')
   }
 
   shotHandler = () => {
     let score = this.state.score;
+    this.shotSound.play()
 
     if (Math.random() > 0.5) {
       score += 1;
+
+      setTimeout(()=>{
+        this.scoreSound.play()
+      }, 100)
+
+
     }
 
     this.setState((state, props) => ({
@@ -22,6 +31,9 @@ class Team extends React.Component {
   };
 
   render() {
+    const shotPercentage = this.state.score / this.state.shots
+
+
     return (
       <div className="Team">
         <h2>{this.props.name}</h2>
@@ -34,6 +46,11 @@ class Team extends React.Component {
         <div>
           <strong>Score:</strong> {this.state.score}
         </div>
+
+      <div><strong> Shooting %: {shotPercentage}</strong>
+      </div>
+
+
         <button onClick={this.shotHandler}>Shoot!</button>{" "}
       </div>
     );
