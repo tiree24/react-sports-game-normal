@@ -52,13 +52,14 @@ class Game extends React.Component {
       }
     }
 
-    this.shotSound = new Audio('Swish+2.mp3')
-    this.scoreSound = new Audio('Swish+2.mp3')
+    this.shotSound = new Audio('Back+Board.mp3')
+    this.scoreSound = new Audio('Swish.mp3')
   }
 
   shoot = (team) => {
     const teamStatsKey = `${team}TeamStats`
     let score = this.state[teamStatsKey].score
+   
     this.shotSound.play()
 
     if (Math.random() > 0.5) {
@@ -75,7 +76,7 @@ class Game extends React.Component {
     this.setState((state, props) => ({
       [teamStatsKey]: {
         shots: state[teamStatsKey].shots + 1,
-
+        score
       }
     }))
   }
@@ -136,17 +137,17 @@ function App(props) {
 
   const squirrels = {
     name: "Sheridan Squirrels",
-    logoSrc: 'https://images.app.goo.gl/NggJ6zakoeyM36w59'
+    logoSrc: 'squirrels.team.jpg'
   }
 
   const souls = {
     name: 'Soul Reapers',
-    logoSrc: 'https://images.app.goo.gl/NggJ6zakoeyM36w59'
+    logoSrc: 'soul.reapers.team.jpg'
   }
 
   const hollows = {
     name: 'Hollows',
-    logoSrc: 'https://images.app.goo.gl/77V3a7q7AZpwid2aA'
+    logoSrc: 'hollows.Team.jfif'
   }
   return (
     <div className="App">
